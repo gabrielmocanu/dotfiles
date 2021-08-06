@@ -117,9 +117,4 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export EDITOR=nvim
-alias vim=nvim
 alias c="xclip -selection clipboard"
-
-alias ssh_queen="ssh -o ServerAliveInterval=60 -D 9999 -C gmocanu@queen.nlehd.de"
-export UK_KRAFT_GITHUB_TOKEN=a694b90de3ae27c12926b5fed588cca92e6f2ca0
