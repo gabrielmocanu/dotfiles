@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Install curl"
+sudo apt install curl
+
+echo "Install multilib"
+sudo apt-get install gcc-multilib
+
+echo "Install tmux"
+sudo apt install tmux
+
+echo "Install ZSH"
+sudo apt-get install zsh -y
+
+echo "Change default terminal"
+chsh -s $(which zsh)
+
+echo "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Install fonts"
+sudo apt-get install fonts-powerline
+
+echo "Install powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+echo "Install FZF"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+echo "Install autojump"
+sudo apt-get install autojump -y
+
+echo "Install FUCK"
+pip3 install thefuck --user
+
+echo "Install Neovim"
+sudo apt install neovim -y
+
+echo "Install automake"
+sudo apt-get install automake -y
+
+echo "Install xclip"
+sudo apt-get install xclip
+
+echo "Install nmap"
+sudo apt install nmap -y
