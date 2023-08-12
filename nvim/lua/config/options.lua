@@ -11,14 +11,14 @@ vim.api.nvim_set_option("spell", true)
 vim.api.nvim_set_option("spelloptions", "camel")
 
 -- WSL2 Clipboard Sync
-vim.g.clipboard = {
-  name = "win32yank",
-  copy = {
-    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
-    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
-  },
-  paste = {
-    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
-    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
-  },
-}
+--vim.g.clipboard = {
+--  name = "win32yank",
+--  copy = {
+--    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
+--    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
+--  },
+--  paste = {
+--    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
+--    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
+--  },
+--}
