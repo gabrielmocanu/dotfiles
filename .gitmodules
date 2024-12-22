@@ -10,3 +10,6 @@
 [submodule "tmux-config"]
 	path = tmux-config
 	url = git@github.com:gpakosz/.tmux.git
+[submodule "wezterm"]
+	path = wezterm
+	url = git@github.com:gabrielmocanu/wezterm-config.git
