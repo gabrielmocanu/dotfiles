@@ -1,10 +1,5 @@
 # Dotfiles configuration
 
-## General
-
-General script to install packages.
-Probably will be deprecated after migrating to nixpkgs.
-
 ## nvim
 
 Neovim config with plugins using LazyVim.
