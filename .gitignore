@@ -1,0 +1,6 @@
+.DS_Store
+tmux/plugins/
+raycast
+fzf
+history.txt
+zshrc/.zsh_history
