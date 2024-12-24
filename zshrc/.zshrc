@@ -9,7 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/.local/share/bob/nvim-bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/.local/share/bob/nvim-bin:/opt/homebrew/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
