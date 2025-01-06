@@ -36,4 +36,10 @@ return {
       { "<leader>jo", ":JiraOpen<cr>", desc = "Open Jira issue in browser", silent = true },
     },
   },
+  {
+    "ZWindL/orphans.nvim",
+    config = function()
+      require("orphans").setup({})
+    end,
+  },
 }
