@@ -13,6 +13,9 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- Copilot
+map("n", "<leader>io", "", { desc = "Copilot code" })
+
 -- Switch to last buffer with <Tab>
 map("n", "<Tab>", "<C-^>", { desc = "Switch to last buffer" })
 
@@ -60,7 +63,7 @@ map("n", "<leader>gt", "<cmd>GitTimeLapse<CR>", { desc = "Git Timelapse" })
 -- Eureka
 map("n", "<leader>o", function()
   require("eureka").show_notes()
-end, { desc = "Eureka" })
+end, { desc = "Eureka buffer" })
 
 -- Advanced Git Search
 map("n", "<leader>ga", function() end, { desc = "Advanced Git" })

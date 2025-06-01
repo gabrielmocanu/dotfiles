@@ -8,12 +8,19 @@ return {
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
+      -- default window options
       window = {
-        layout = "float",
-        relative = "editor",
-        width = 1,
-        height = 0.4,
-        row = 30,
+        layout = "vertical", -- 'vertical', 'horizontal', 'float', 'replace', or a function that returns the layout
+        width = 0.5, -- fractional width of parent, or absolute width in columns when > 1
+        height = 0.5, -- fractional height of parent, or absolute height in rows when > 1
+        -- Options below only apply to floating windows
+        relative = "editor", -- 'editor', 'win', 'cursor', 'mouse'
+        border = "single", -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
+        row = nil, -- row position of the window, default is centered
+        col = nil, -- column position of the window, default is centered
+        title = "Copilot Chat", -- title of chat window
+        footer = nil, -- footer of chat window
+        zindex = 1, -- determines if window is on top or below other floating windows
       },
 
       show_folds = true,
@@ -24,17 +31,32 @@ return {
         normal = "<C-s>",
         insert = "<C-s>",
       },
+      show_diff = {
+        full_diff = true,
+      },
     },
     keys = {
       {
-        "<leader>cx",
+        "<leader>io",
         function()
-          require("CopilotChat").ask()
+          require("CopilotChat").open({
+            layout = "vertical", -- 'vertical', 'horizontal', 'float', 'replace', or a function that returns the layout
+            width = 0.5, -- fractional width of parent, or absolute width in columns when > 1
+            height = 0.5, -- fractional height of parent, or absolute height in rows when > 1
+            -- Options below only apply to floating windows
+            relative = "editor", -- 'editor', 'win', 'cursor', 'mouse'
+            border = "single", -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
+            row = nil, -- row position of the window, default is centered
+            col = nil, -- column position of the window, default is centered
+            title = "Copilot Chat", -- title of chat window
+            footer = nil, -- footer of chat window
+            zindex = 1, -- determines if window is on top or below other floating windows
+          })
         end,
-        desc = "CopilotChat - Ask",
+        desc = "Copilot - Open chat",
       },
       {
-        "<leader>cq",
+        "<leader>iq",
         function()
           local input = vim.fn.input("Quick Chat: ")
           if input ~= "" then
@@ -44,23 +66,13 @@ return {
         desc = "CopilotChat - Quick chat",
       },
       {
-        "<leader>cp",
+        "<leader>ip",
         function()
-          local actions = require("CopilotChat.actions")
-          require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+          local chat = require("CopilotChat")
+          chat.select_prompt()
         end,
-        desc = "CopilotChat - Prompt actions",
+        desc = "Copilot - Prompt actions",
       },
-      -- {
-      --   "<leader>ccp",
-      --   function()
-      --     local actions = require("CopilotChat.actions")
-      --     require("CopilotChat.integrations.fzflua").pick(actions.prompt_actions())
-      --   end,
-      --   desc = "CopilotChat - Prompt actions",
-      -- },
     },
-
-    -- See Commands section for default commands if you want to lazy load on them
   },
 }

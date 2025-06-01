@@ -6,6 +6,8 @@
 vim.g.t_ZH = "[3m"
 vim.g.t_ZR = "[23m"
 
+vim.opt.completeopt = "popup,noselect,noinsert"
+
 -- WSL2 Clipboard Sync
 -- TODO: Find some way to auto-install `win32yank.exe` in the correct path
 if os.getenv("WSL_DISTRO_NAME") then
