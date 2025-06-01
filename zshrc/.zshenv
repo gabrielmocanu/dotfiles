@@ -45,6 +45,7 @@ alias ga='git add -p'
 alias gcoall='git checkout -- .'
 alias gr='git remote'
 alias gre='git reset'
+alias gs='git show --color --pretty=format:%b'
 
 # Docker
 alias dco="docker compose"

@@ -9,7 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/.local/share/bob/nvim-bin:/opt/homebrew/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/.local/share/bob/nvim-bin:/opt/homebrew/bin:$HOME/.local/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,7 +79,7 @@ zstyle ':omz:update' frequency 30
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(autojump zsh-syntax-highlighting zsh-autosuggestions mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,6 +98,9 @@ source /Users/gabrielmocanu/Projects/coda/devops-tools/coda-rc/.coda-rc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Mise
+eval "$(/Users/gabrielmocanu/.local/bin/mise activate zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/gabrielmocanu/sdks/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gabrielmocanu/sdks/google-cloud-sdk/path.zsh.inc'; fi
