@@ -102,6 +102,9 @@ export NVM_DIR="$HOME/.nvm"
 # Mise
 eval "$(/Users/gabrielmocanu/.local/bin/mise activate zsh)"
 
+# Load env variables
+source .env
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/gabrielmocanu/sdks/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gabrielmocanu/sdks/google-cloud-sdk/path.zsh.inc'; fi
 

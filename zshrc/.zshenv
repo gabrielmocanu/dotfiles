@@ -53,3 +53,7 @@ alias dps="docker ps"
 alias dpa="docker ps -a"
 alias dl="docker ps -l -q"
 alias dx="docker exec -it"
+
+# Graphite
+function gtnb() { gt create --patch $(linear issue list | fzf --reverse | awk '{ print tolower($2) }') }
+alias gts="gt submit --ai --cli --draft"
